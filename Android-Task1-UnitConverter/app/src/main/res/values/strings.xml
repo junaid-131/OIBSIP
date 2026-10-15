@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Unit Converter</string>
+    <string name="menu_history">History</string>
+    <string name="menu_theme">Toggle Theme</string>
+    <string name="history_title">History</string>
+    <string name="history_empty">No saved conversions yet</string>
+    <string name="clear_history">Clear History</string>
+    <string name="swap">⇅</string>
+    <string name="copied">Copied to clipboard</string>
+    <string name="save">Save</string>
+    <string name="saved">Saved to history</string>
+
+    <string name="cat_length">Length</string>
+    <string name="cat_weight">Weight</string>
+    <string name="cat_temp">Temperature</string>
+    <string name="cat_volume">Volume</string>
+    <string name="cat_area">Area</string>
+    <string name="cat_speed">Speed</string>
+    <string name="cat_time">Time</string>
+    <string name="cat_data">Data</string>
+</resources>

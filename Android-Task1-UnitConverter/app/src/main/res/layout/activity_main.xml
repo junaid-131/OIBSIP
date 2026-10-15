@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorSurface"
+    android:orientation="vertical"
+    android:padding="12dp">
+
+    <!-- ═══════ TOP BAR ═══════ -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/app_name"
+            android:textColor="?attr/colorOnSurface"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/btnTheme"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/menu_theme"
+            android:src="@android:drawable/ic_menu_day"
+            app:tint="?attr/colorPrimary" />
+
+        <ImageButton
+            android:id="@+id/btnHistory"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_marginStart="4dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/history_title"
+            android:src="@android:drawable/ic_menu_recent_history"
+            app:tint="?attr/colorPrimary" />
+    </LinearLayout>
+
+    <!-- ═══════ CATEGORY CHIPS ═══════ -->
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/chipGroupCategory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:chipSpacingHorizontal="6dp"
+        app:chipSpacingVertical="4dp"
+        app:selectionRequired="true"
+        app:singleSelection="true">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipLength"
+            style="@style/Widget.Material3.Chip.Filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/cat_length" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipWeight"
+            style="@style/Widget.Material3.Chip.Filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cat_weight" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipTemp"
+            style="@style/Widget.Material3.Chip.Filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cat_temp" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipVolume"
+            style="@style/Widget.Material3.Chip.Filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cat_volume" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipArea"
+            style="@style/Widget.Material3.Chip.Filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cat_area" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipSpeed"
+            style="@style/Widget.Material3.Chip.Filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cat_speed" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipTime"
+            style="@style/Widget.Material3.Chip.Filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cat_time" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipData"
+            style="@style/Widget.Material3.Chip.Filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cat_data" />
+    </com.google.android.material.chip.ChipGroup>
+
+    <!-- ═══════ FROM CARD ═══════ -->
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        app:cardBackgroundColor="?attr/colorSurfaceVariant"
+        app:cardCornerRadius="18dp"
+        app:cardElevation="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="12dp">
+
+            <TextView
+                android:id="@+id/tvInput"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="start|center_vertical"
+                android:text="0"
+                android:textColor="?attr/colorOnSurface"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:maxLines="1"
+                android:scrollHorizontally="true"
+                android:ellipsize="none"
+                android:focusable="true"
+                android:focusableInTouchMode="true" />
+
+            <Spinner
+                android:id="@+id/spFrom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="120dp" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- ═══════ SWAP ═══════ -->
+    <ImageButton
+        android:id="@+id/btnSwap"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_gravity="center"
+        android:layout_marginVertical="4dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="@string/swap"
+        android:src="@android:drawable/ic_menu_sort_by_size"
+        app:tint="?attr/colorPrimary" />
+
+    <!-- ═══════ TO CARD ═══════ -->
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/primary_container"
+        app:cardCornerRadius="18dp"
+        app:cardElevation="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="12dp">
+
+            <TextView
+                android:id="@+id/tvResult"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="start|center_vertical"
+                android:text=""
+                android:textColor="@color/primary"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:maxLines="1"
+                android:scrollHorizontally="true"
+                android:ellipsize="none"
+                android:longClickable="true"
+                android:focusable="true"
+                android:focusableInTouchMode="true" />
+
+            <Spinner
+                android:id="@+id/spTo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="120dp" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- ═══════ KEYPAD ═══════ -->
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="12dp"
+        android:layout_weight="1"
+        android:columnCount="4"
+        android:rowCount="4">
+
+        <Button
+            android:id="@+id/key7"
+            style="@style/KeyBtn"
+            android:text="7" />
+
+        <Button
+            android:id="@+id/key8"
+            style="@style/KeyBtn"
+            android:text="8" />
+
+        <Button
+            android:id="@+id/key9"
+            style="@style/KeyBtn"
+            android:text="9" />
+
+        <Button
+            android:id="@+id/keyBack"
+            style="@style/KeyBtn.Accent"
+            android:text="⌫" />
+
+        <Button
+            android:id="@+id/key4"
+            style="@style/KeyBtn"
+            android:text="4" />
+
+        <Button
+            android:id="@+id/key5"
+            style="@style/KeyBtn"
+            android:text="5" />
+
+        <Button
+            android:id="@+id/key6"
+            style="@style/KeyBtn"
+            android:text="6" />
+
+        <Button
+            android:id="@+id/keyClear"
+            style="@style/KeyBtn.Danger"
+            android:text="C" />
+
+        <Button
+            android:id="@+id/key1"
+            style="@style/KeyBtn"
+            android:text="1" />
+
+        <Button
+            android:id="@+id/key2"
+            style="@style/KeyBtn"
+            android:text="2" />
+
+        <Button
+            android:id="@+id/key3"
+            style="@style/KeyBtn"
+            android:text="3" />
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="18dp"
+            style="@style/KeyBtn.Primary"
+            android:layout_rowSpan="2"
+            android:layout_gravity="fill_vertical"
+            android:text="@string/save" />
+
+        <Button
+            android:id="@+id/key0"
+            style="@style/KeyBtn"
+            android:layout_columnSpan="2"
+            android:layout_gravity="fill_horizontal"
+            android:text="0" />
+
+        <Button
+            android:id="@+id/keyDot"
+            style="@style/KeyBtn"
+            android:text="." />
+    </GridLayout>
+
+</LinearLayout>
