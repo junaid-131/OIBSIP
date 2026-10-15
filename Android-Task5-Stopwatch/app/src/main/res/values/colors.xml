@@ -1,0 +1,30 @@
+<resources>
+    <!-- Brand -->
+    <color name="primary">#6366F1</color>
+    <color name="primary_dark">#4F46E5</color>
+    <color name="primary_container">#E0E7FF</color>
+    <color name="on_primary">#FFFFFF</color>
+
+    <!-- Accents -->
+    <color name="gradient_start">#6366F1</color>
+    <color name="gradient_end">#A855F7</color>
+
+    <color name="green">#10B981</color>
+    <color name="green_dark">#059669</color>
+    <color name="amber">#F59E0B</color>
+    <color name="red">#EF4444</color>
+    <color name="red_dark">#B91C1C</color>
+    <color name="on_accent">#FFFFFF</color>
+
+    <!-- Light surface -->
+    <color name="surface_light">#FFFFFF</color>
+    <color name="surface_variant_light">#F3F4F6</color>
+    <color name="on_surface_light">#111827</color>
+    <color name="on_surface_variant_light">#6B7280</color>
+
+    <!-- Dark surface -->
+    <color name="surface_dark">#0B1020</color>
+    <color name="surface_variant_dark">#1E293B</color>
+    <color name="on_surface_dark">#F9FAFB</color>
+    <color name="on_surface_variant_dark">#94A3B8</color>
+</resources>

@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Stopwatch</string>
+    <string name="menu_theme">Toggle Theme</string>
+    <string name="start">START</string>
+    <string name="pause">PAUSE</string>
+    <string name="reset">RESET</string>
+    <string name="lap">LAP</string>
+    <string name="status_ready">READY</string>
+    <string name="status_running">RUNNING</string>
+    <string name="status_paused">PAUSED</string>
+    <string name="laps_title">LAPS</string>
+    <string name="laps_empty">No laps recorded yet</string>
+    <string name="reset_confirm">Reset the stopwatch?</string>
+    <string name="yes">Reset</string>
+    <string name="no">Cancel</string>
+    <string name="initial_main">00:00:00</string>
+    <string name="initial_millis">.000</string>
+    <string name="lap_start_hint">Start the timer to record laps</string>
+</resources>
